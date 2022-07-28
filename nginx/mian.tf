@@ -9,7 +9,7 @@ resource "aws_instance" "app_server" {
 }
 
 data "template_file" "init" {
-  template = "${file("script.sh")}"
+  template = "${file("log.sh")}"
 
   vars = {
     device_name = "test"
