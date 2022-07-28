@@ -4,7 +4,7 @@ resource "aws_instance" "app_server" {
   key_name = "mumbai"
   user_data = data.template_file.init.rendered
   tags = {
-    Name = "nginx"
+    env = var.tagname
   }
 }
 
