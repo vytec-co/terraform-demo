@@ -1,3 +1,9 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Parameters:
+  SubnetID:
+    Type: String
+  MYSecurityGroup:
+    Type: String
 Resources:
   Ec2Instance: 
     Type: AWS::EC2::Instance
@@ -5,3 +11,8 @@ Resources:
       ImageId: "ami-02f3416038bdb17fb"
       KeyName:  "ohio"
       InstanceType: "t2.micro"
+      NetworkInterfaces: 
+      - AssociatePublicIpAddress: "true"
+        DeviceIndex: "0"
+        SubnetId: 
+          Ref: "SubnetID"
