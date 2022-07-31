@@ -1,0 +1,7 @@
+Resources:
+  Ec2Instance: 
+    Type: AWS::EC2::Instance
+    Properties: 
+      ImageId: "ami-02f3416038bdb17fb"
+      KeyName:  "ohio"
+      InstanceType: "t2.micro"
