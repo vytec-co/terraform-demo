@@ -1,0 +1,9 @@
+
+
+create:
+aws cloudformation create-stack --stack-name example --template-body file://./ec2.yml --capabilities CAPABILITY_NAMED_IAM --parameters 'ParameterKey=SubnetID,ParameterValue=subnet-82260cce'
+'ParameterKey=MYSecurityGroup,ParameterValue=devops'
+
+delete
+aws cloudformation delete-stack \
+    --stack-name example
